@@ -1353,8 +1353,9 @@ The `release.yml` GitHub Actions workflow handles the rest: it
 smoke-checks every `src/*.js` and `bin/*.mjs`, runs the full test suite,
 verifies the tag matches `package.json`, confirms every `exports`
 subpath resolves and actually ships in the tarball, and publishes to npm
-with provenance. Requires an `NPM_TOKEN` repo secret minted from the
-`copperdesign` npm account.
+with provenance. It authenticates through npm Trusted Publishing (OIDC),
+so there is no token to rotate; the trusted publisher is configured on the
+package's settings page on npmjs.com.
 
 **The tag is load-bearing beyond npm.** Consumers reference the reusable
 sync workflow as
