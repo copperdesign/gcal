@@ -58,7 +58,7 @@ Hard no:
 ## Getting set up
 
 ```bash
-git clone https://github.com/copperdesign/gCal.git
+git clone https://github.com/copperdesign/gcal.git
 cd gCal
 ```
 

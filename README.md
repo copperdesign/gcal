@@ -141,7 +141,7 @@ const data = {
 > anyone west of Greenwich — including visitors, since `timeZone` is
 > optional and falls back to the runtime's zone. `startDay` / `endDay`
 > likewise follow the configured `timeZone` now rather than the host's
-> ([#9](https://github.com/copperdesign/gCal/issues/9)).
+> ([#9](https://github.com/copperdesign/gcal/issues/9)).
 
 ## Configuration
 
@@ -849,7 +849,7 @@ on:
 
 jobs:
   sync:
-    uses: copperdesign/gCal/.github/workflows/sync.yml@v0.5.1
+    uses: copperdesign/gcal/.github/workflows/sync.yml@v0.5.1
     permissions:
       contents: write        # the sync job pushes the commit — see below
     with:
@@ -901,7 +901,7 @@ knows, so your pipeline can decide for itself:
 ```yaml
 jobs:
   sync:
-    uses: copperdesign/gCal/.github/workflows/sync.yml@v0.5.1
+    uses: copperdesign/gcal/.github/workflows/sync.yml@v0.5.1
     permissions: { contents: write }
     with:     { config: gcal.config.json }
     secrets:  { api-key: ${{ secrets.GCAL_API_KEY }} }
@@ -948,7 +948,7 @@ commit yourself, once the thing is actually live:
 ```yaml
 jobs:
   sync:
-    uses: copperdesign/gCal/.github/workflows/sync.yml@v0.5.1
+    uses: copperdesign/gcal/.github/workflows/sync.yml@v0.5.1
     # No permissions block: this job fetches and decides, and never
     # pushes. Don't hand a write token to a job that talks to the
     # open internet when it has nothing to write.
@@ -1151,7 +1151,7 @@ on:
 
 jobs:
   sync:
-    uses: copperdesign/gCal/.github/workflows/sync.yml@v0.5.1
+    uses: copperdesign/gcal/.github/workflows/sync.yml@v0.5.1
     permissions:
       contents: write
     with:
@@ -1359,7 +1359,7 @@ package's settings page on npmjs.com.
 
 **The tag is load-bearing beyond npm.** Consumers reference the reusable
 sync workflow as
-`copperdesign/gCal/.github/workflows/sync.yml@vX.Y.Z`, which resolves
+`copperdesign/gcal/.github/workflows/sync.yml@vX.Y.Z`, which resolves
 against the git tag — so a release that publishes to npm without pushing
 the tag leaves every consuming site's sync job unable to resolve its
 `uses:` line. `git push --follow-tags` before `gh release create`.

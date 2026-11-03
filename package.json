@@ -43,11 +43,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/copperdesign/gCal.git"
+    "url": "git+https://github.com/copperdesign/gcal.git"
   },
-  "homepage": "https://github.com/copperdesign/gCal#readme",
+  "homepage": "https://github.com/copperdesign/gcal#readme",
   "bugs": {
-    "url": "https://github.com/copperdesign/gCal/issues"
+    "url": "https://github.com/copperdesign/gcal/issues"
   },
   "engines": {
     "node": ">=18"

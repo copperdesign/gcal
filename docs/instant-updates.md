@@ -251,7 +251,7 @@ on:
 
 jobs:
   sync:
-    uses: copperdesign/gCal/.github/workflows/sync.yml@v0.5.1
+    uses: copperdesign/gcal/.github/workflows/sync.yml@v0.5.1
     permissions:
       contents: write
     with:
